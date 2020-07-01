@@ -6,7 +6,5 @@ class Admin::DashboardController < Admin::BaseController
     @orders = Order.order(:id)
   end
 
-  def cancel?(order)
-    (order.ordered? || order.paid?) && !order.cancelled?
-  end
+  
 end
